@@ -1,0 +1,166 @@
+<?php
+include ('validar_session.php');
+include ('jquery.php');
+conecta();
+$sql = "SELECT siape, administrador "
+        . " FROM solicitantes WHERE siape='$login_usuario'";
+$res = mysql_query($sql);
+while ($row = mysql_fetch_assoc($res)) {
+    $nivel = $row['administrador'];
+}
+if ($nivel == 1) {
+    header("Location: listarSolicitacaoOutros.php");
+    exit();
+}
+?>
+<html> 
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">        
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen"
+              href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">       
+        <script type="text/javascript"
+                src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+        </script> 
+        <script type="text/javascript"
+        src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+                src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+        </script>
+        <script type="text/javascript"
+                src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+        </script>      
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    </head>
+    <img src="imagens/banner_topo.png" class="img-rounded img-responsive">
+<?php include "menu.php"; ?>
+    <body  style="font-family: courier">
+        <div  class="container-fluid">    
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title" >Gerenciamento de Banco de Horas</h3>
+                </div>
+                <div class="panel-body "> 
+
+                    <form method="post" action="cadBancoHoras.php" name="solicita">
+                        <table class="table" >
+
+                            <tr>
+                                <td>
+                                    <div >
+                                        <label for="Motorista">Motorista</label>
+                                    </div>                
+                               
+                                    <select name="setEscolhaMotorista" style="height: 30px;width: 400px" required="true">
+                                        <?php
+                                        conecta();
+                                        // Recebe todos os campos da tabela controle do registro de código da variável $codSolicitado             
+                                        $pesquisa = "SELECT * FROM motoristas
+                                            WHERE statusMotorista = 1
+                                       ORDER BY motorista;";
+                                        $resultado = mysql_query($pesquisa) or die("Não foi possível realizar a consulta ao banco de dados");
+                                        While ($registro = mysql_fetch_array($resultado)) {
+                                            ?>       
+                                            <option value="<?= $registro['codMotorista'] ?>"><?= $registro['motorista'] ?></option>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </select>
+                                </td>
+                                <td>
+                                    <div >
+                                        <label for="DataFolga">Data da Folga</label>
+                                    </div>                     
+                                
+                                    <input type="text" id="calendario" 
+                                           name="setDataBancoHoras" style="height: 100%" required="true"/>                             
+                                </td>
+
+                                <td >
+                                    <div >
+                                        <label for="Solicitacao">Solicitação</label>
+                                    </div>                      
+                               
+                                    <select name="setEscolhaHoraExtra" style="height: 30px;width: 450px">
+
+                                        <?php
+                                        conecta();
+                                        // Recebe todos os campos da tabela controle do registro de código da variável $codSolicitado             
+                                        $pesquisa = "SELECT * FROM listarbancohoras
+                                            WHERE statusHoraExtra = 1
+                                                                   
+                                            ORDER BY codHoraExtra";
+
+                                        $resultado = mysql_query($pesquisa) or die("Não foi possível realizar a consulta ao banco de dados");
+                                        While ($registro = mysql_fetch_array($resultado)) {
+                                            ?>       
+                                            <option value="<?= $registro['idSolicitacaoBancoHoras'] ?>"><?= $registro['idSolicitacaoBancoHoras'] ?> - <?= formatoData($registro['dtSaidaControle']) ?> - <?= $registro['motorista'] ?> - <?= $registro['horaExtra'] ?></option>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table">
+                            <tr>               
+                                <td >
+                                    <div >
+                                        <label for="Horas">Horas(para abatimento de horas use o sinal de subtração '-')</label>
+                                    </div>
+
+                                    <input type="text" name="setHoraExtra" style="height: 30px;width: 100px" placeholder="00:00"
+                                           required="true" maxlength="6"/>
+                                </td>
+                           
+                                <td>
+                                    <div >
+                                        <label for="Justificativa">Justificativa</label>
+                                    </div>                
+                              
+                                    <input  type="text" name="setJustificativa" required="true"
+                                            style="height: 30px;width: 900px"/>                
+                                </td>
+
+                            </tr>
+                        </table>
+                        <div class="btn-lg">
+                            <div class="pull-right">
+                                <button type="reset" class="btn btn-warning btn-xs" onClick="history.go(-1)">
+                                    Voltar
+                                </button>
+                                <button type="submit" class="btn btn-danger" onclick="location.href = 'sair.php'">                                    
+                                    Cancelar
+                                </button> 
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                    Cadastrar
+                                </button>                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $("#calendario").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: 'dd/mm/yy',
+                    dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+                    dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+                    dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                    monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+
+
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+############################## controle de versao ###################################
+
+# SISTEMA SISTD
+
+********************** VERSAO DO SISTEMA ********************************************
+
+# VERSAO.: 3.2
+# DATA...: 20/05/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
++ linhas de XX a YY no arquivo configGerais.php
++ linhas de XX a YY no arquivo cadConfigGerais.php
++ linhas de XX a YY no arquivo funcoes.php
++ linhas de XX a YY no arquivo listarLog.php
+$ linhas de XX a YY no arquivo pdfBancoHoras.php
+$ linhas de XX a YY no arquivo pdfPestarContas.php
+$ linhas de XX a YY no arquivo pdfBancoHorasReimprime.php
+$ linhas de XX a YY no arquivo pdfSolicita.php
+$ linhas de XX a YY no arquivo pdfSolicitaDiaria.php
+$ linhas de XX a YY no arquivo pdfSolicitaDiariaSolicitante.php
+$ linhas de XX a YY no arquivo pdfSolicitaListar.php
+$ linhas de XX a YY no arquivo pdfFinalizada.php
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+********************** VERSAO DO SISTEMA ********************************************
+
+# VERSAO.: 3.3
+# DATA...: 25/06/2016
+
+# DESCRICAO DAS ALTERACOES: incluir novos relatorios e incluir novo nivel de usuario "portaria"
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
++ linhas de XX a YY no arquivo usuarios.php
++ linhas de XX a YY no arquivo listarUsuariosSolicitante.php
++ linhas de XX a YY no arquivo editarUsuario.php
++ linhas de XX a YY no arquivo logar.php
++ linhas de XX a YY no arquivo logarDiaria.php
++ linhas de XX a YY no arquivo menu.php
+++ arquivo controlePortaria.php
+++ arquivo atualizaControlePortaria.php
+++ arquivo listarSolicitacaoPortaria.php
+++ arquivo solicitacoesGerais.php
+++ arquivo solicitacoesPorMot.php
+++ arquivo solicitacoesPorQuantPass.php
+++ arquivo solicitacoesPorSit.php
+++ arquivo solicitacoesPorVeic.php
+++ arquivo relatorios/relsolicitacoesGerais.php
+++ arquivo relatorios/relsolicitacoesMot.php
+++ arquivo relatorios/relsolicitacoesQuantPass.php
+++ arquivo relatorios/relsolicitacoesSit.php
+++ arquivo relatorios/relsolicitacoesSol.php
+++ arquivo relatorios/relsolicitacoesVeic.php
+++ arquivo controlePortaria.php
+$ linhas de XX a YY no arquivo listarUsuarioSolicitante.php
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+********************** VERSAO DO SISTEMA ********************************************
+
+# VERSAO.: 3.2
+# DATA...: 27/07/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
++ linhas 52 no arquivo cadSincronizaUsuarios.php
+$ linhas 73 e 74 no arquivo cadSincronizaUsuarios.php
++ linhas 93 no arquivo cadSincronizaUsuarios.php
+$ linhas 143 e 144 no arquivo cadSincronizaUsuarios.php
+$ linhas 71 e 72 no arquivo listarUsuarios.php
++ linhas 105 e 106 no arquivo listarUsuarios.php
+- linhas 107 a 115 no arquivo listarUsuarios.php
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+********************** VERSAO DO SISTEMA ********************************************
+
+# VERSAO.: 3.2
+# DATA...: 11/08/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
+- linhas 672 até 700 no arquivo controleDiaria.php (as linhas do final foram excluídas e alteradas para o início)
++ linhas 84 até 137 no arquivo controleDiaria.php
++ linhas 107 e 108 / 167 e 168 no arquivo listarDiariasSolicitante.php
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+********************** VERSAO DO SISTEMA ********************************************
+
+# VERSAO.: 3.2
+# DATA...: 23/08/2016 e 24/03/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
+$ linhas 281 até 320 no arquivo diaria.php 
++ linhas 118 até 177, 335 até 367, 412 até 425, 506 até 512, 600 até 664, 712 até 756 no arquivo diaria.php
++ linhas 78 até 84 no arquivo editarUsuarioDiaria.php
++ linhas 80 até 87 no arquivo editarUsuario.php
++ linhas 20 e 21, 39 no arquivo editandoUsuario.php
++ linhas 24 e 25, 38 no arquivo editandoUsuarioSolicitante.php
++ linhas 76 até 83 no arquivo usuarios.php
++ linhas 38 até 52, 106 até 114, 145 até 155 no arquivo cadDiaria.php
++ linhas 30 e 31 no arquivo cadUsuario.php
++ linhas 399 até 434, 525 até 554, 688 até 695, 788 até 882,1001 até 1117 no arquivo editarDiaria.php
+$ linhas  56 até 215, 254 até 363  no arquivo editarDiaria.php
++ linhas 46 até 55 e 109 até 118 no arquivo editandoDiaria.php
+$ linhas 90 até 196  no arquivo visualizarDiaria.php
++ linhas 199 até 272, 370 até 393,532 até 539, 621 até 716, 835 até 952 no arquivo visualizarDiaria.php
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+********************** VERSAO DO SISTEMA ********************************************
+
+# VERSAO.: 3.2
+# DATA...: 01/09/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
++ linha 45 e 72 no arquivo logar.php 
+$ linha 46 e 73 no arquivo logar.php 
++ linha 45 e 72 no arquivo logarDiaria.php
+$ linha 46 e 73  no arquivo logarDiaria.php 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

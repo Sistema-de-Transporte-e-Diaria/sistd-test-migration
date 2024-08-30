@@ -1,0 +1,106 @@
+CREATE VIEW listarsolicitacao AS
+SELECT * FROM solicitacao
+	 INNER JOIN solicitantes
+ON solicitacao.idSolicitante = solicitantes.siape
+          INNER JOIN setor
+ON solicitantes.idSetor = setor.codSetor
+
+CREATE VIEW listarabastecimento AS
+SELECT * FROM abastecimentos
+	 INNER JOIN veiculos
+ON abastecimentos.idveiculo = veiculos.codVeiculo
+          INNER JOIN motoristas
+ON abastecimentos.idmotorista = motoristas.codMotorista
+
+CREATE VIEW listarhoraextramot AS
+SELECT * FROM horaExtraMot
+	 INNER JOIN motoristas
+ON horaExtraMot.idMotorista_FK = motoristas.codMotorista
+
+CREATE VIEW listarcontrole AS
+SELECT * FROM controle
+	 INNER JOIN motoristas
+ON controle.idMotorista = motoristas.codMotorista
+          INNER JOIN veiculos
+ON controle.idVeiculo = veiculos.codVeiculo
+
+CREATE VIEW listarsolicitacaocontrole AS
+SELECT * FROM solicitacao
+	 INNER JOIN controle
+ON solicitacao.codSolicitacao = controle.codSolicitacaoControle
+	 INNER JOIN motoristas
+ON controle.idmotorista = motoristas.codmotorista
+	 INNER JOIN veiculos
+ON controle.idveiculo = veiculos.codveiculo
+         INNER JOIN solicitantes
+ON solicitacao.idSolicitante = solicitantes.siape
+	INNER JOIN setor
+ON solicitantes.idsetor = setor.codSetor
+
+CREATE VIEW listarsolicitantes AS
+SELECT * FROM solicitantes
+	 INNER JOIN setor
+ON solicitantes.idsetor = setor.codSetor
+
+CREATE VIEW listardiarias AS
+SELECT * FROM diarias
+	 INNER JOIN cidades
+ON diarias.cidDestino = cidades.cod_cidades
+         INNER JOIN estados
+ON estados.cod_estados = cidades.estados_cod_estados
+       
+CREATE VIEW listarbancohoras AS
+SELECT * FROM bancoHoras
+	 INNER JOIN solicitacao
+ON solicitacao.codSolicitacao = bancoHoras.idSolicitacaoBancoHoras
+	 INNER JOIN motoristas
+ON bancoHoras.idMotoristaBancoHoras = motoristas.codMotorista
+	INNER JOIN controle
+ON bancoHoras.idSolicitacaoBancoHoras = controle.CodSolicitacaoControle
+	
+
+CREATE VIEW listardespachos AS
+SELECT * FROM despacho
+	 INNER JOIN listarsolicitacao
+ON listarsolicitacao.codSolicitacao = despacho.idSolicitacao_FK
+
+CREATE VIEW listarfolga AS
+SELECT * FROM folgaMotorista
+	 INNER JOIN motoristas
+ON folgaMotorista.idMotorista_FK = motoristas.codMotorista
+
+
+CREATE VIEW listardiariamotavulso AS
+SELECT * FROM diariaMotoristaAvulso
+          INNER JOIN motoristas
+ON diariaMotoristaAvulso.idmotorista = motoristas.codMotorista
+
+CREATE VIEW listarveiculos AS SELECT * FROM 
+veiculos,marcas WHERE marcas.idMarca = veiculos.marca
+
+
+
+
+// Correção para acentos no DOMPDF;
+
+ARQUIVO: class.pdf.php
+
+LINHA: 3165;
+
+function filterText($text, $bom = true, $convert_encoding = true) {
+    if (!$this->numFonts) {
+      $this->selectFont($this->defaultFont);
+    }
+// ACRESCENTAR A LINHA ABAIXO:
+
+ $text =  utf8_decode($text); 	 
+
+
+// POSSIBILITA A EXCLUSÃO DE REGISTRO DESCONSIDERANDO CHAVES ESTRANGEIRAS:
+
+Ex.: excluir registro duplicado da tabela controle
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+// CRIAR VISÃO DE LISTAR VEICULOS COM MARCAS
+

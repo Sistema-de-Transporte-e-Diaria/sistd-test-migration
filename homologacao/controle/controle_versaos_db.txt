@@ -1,0 +1,63 @@
+############################## controle de versao ###################################
+
+# SISTEMA SISTD
+
+********************** VERSAO DO BANDO DE DADOS *************************************
+
+# VERSAO.: 3.1
+# DATA...: 20/05/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
+
++ ldappass tipo varchar (100) table manutencao
++ ldapuser tipo varchar (300) table manutencao
++ statusbase tipo int (1) default 1 table manutencao
++ nomecampus tipo varchar (100) table manutencao
++ enderecocampus tipo varchar (500) table manutencao
++ telcampus tipo varchar (30) table manutencao
++ nomesetorcampus tipo varchar (200) table manutencao
++ siglasetorcampus tipo varchar (20) table manutencao
+
+
+********************** VERSAO DO BANDO DE DADOS *************************************
+
+# VERSAO.: 3.1 
+# DATA...: 23/05/2016 e 24/05/2016
+
+# DESCRICAO DAS ALTERACOES: incluir campos de identifica��o do campus nas configura��es gerais do sistema, para assim esses dados serem lidos por diversos relatorios e PDFs do sistema
+
+=================================== ALTERACOES ======================================
+
+# "+" INCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "-" EXCLUSAO DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "$" ALTERA�OES DE LINHAS DE CODIGO DENTRO DO ARQUIVO
+# "++" CRIA��O DE UM NOVO ARQUIVO
+# "--" EXCLUS�O DE ARQUIVO EXISTENTE
+# "&" INCLUSAO/EXCLUSAO DE PASTAS
+
+_____________________________________________________________________________________
+
+
++ campo cargoFunOrigServMunEst tipo varchar(300) na table diarias
++ campo valeTranspServMunEst tipo varchar(100) na table diarias
++ campo valeAlimentServMunEst tipo varchar(100) na tbale diarias
++ campo dtNasc tipo date na table solicitantes
++ campo meioTransporteVolta  tipo varchar(40) na table diarias
++ campo tipoDiaria tipo varchar(40) na table diarias
++ campo dtEmbarqueIDA tipo date na table diarias
++ campo dtEmbarqueVOLTA tipo date na table diarias
++ campojustificativaDiariaEmbarque tipo varchar(500) na table diarias
+
+
